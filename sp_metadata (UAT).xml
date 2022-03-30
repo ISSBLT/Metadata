@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://InchcapeExtSec.onmicrosoft.com/BLTUAT" ID="_dd14c8fb-6491-475e-9e15-943bc0adc2be">
+	<md:RoleDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706" xsi:type="fed:ApplicationServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/ws-sx/ws-trust/200512 http://schemas.xmlsoap.org/ws/2005/02/trust http://docs.oasis-open.org/wsfed/federation/200706">
+		<fed:ClaimTypesRequested>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+                <auth:DisplayName>Name</auth:DisplayName>
+                <auth:Description>The unique name of the user</auth:Description>
+            </auth:ClaimType>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">
+                <auth:DisplayName>E-Mail Address</auth:DisplayName>
+                <auth:Description>The e-mail address of the user</auth:Description>
+            </auth:ClaimType>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+                <auth:DisplayName>Username</auth:DisplayName>
+                <auth:Description>The Username of the user</auth:Description>
+            </auth:ClaimType>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/mobilephone">
+                <auth:DisplayName>Mobile number</auth:DisplayName>
+                <auth:Description>Mobile number of the user</auth:Description>
+            </auth:ClaimType>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier">
+                <auth:DisplayName>External ID number</auth:DisplayName>
+                <auth:Description>External ID of the user</auth:Description>
+            </auth:ClaimType>
+           <auth:ClaimType xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706" Optional="true" Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+                <auth:DisplayName>Surname</auth:DisplayName>
+                <auth:Description>The surname of the user</auth:Description>
+            </auth:ClaimType>
+		</fed:ClaimTypesRequested>
+	</md:RoleDescriptor>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:KeyDescriptor use="signing">
+		  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:X509Data>
+			  <ds:X509Certificate>MIICoDCCAYigAwIBAgIIJMme1G0/SdYwDQYJKoZIhvcNAQELBQAwEDEOMAwGA1UEAwwFT1NfU1AwHhcNMjIwMzI1MDAwMDAwWhcNMzIwMzI1MDAwMDAwWjAQMQ4wDAYDVQQDDAVPU19TUDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIxDq7Jnk3cJ/NzEmBBiKWTol/3mVcIAWSuyCXdeIZhOkJcgqKWL/8GV7t5hQ2rX6jXA5AmvIwwcTn0dc1+4u7wJu9u/G6aqUWMeX0aQBaoWAZIX+uFJoCFWaoXiiO8vadDKwaDZuqmvZIKvt5WYM4hq7JzRb3YxcB3IqI/VgQczlfD/bFi3JP8/6/A06urB1c/LcjTMMCVCB+KsoMXCTkpowg09bG+ORFdai6TGsr9YFIe+EGFFHhFqvmVbY3qE8CXv/qU5kKOSZirrkN7lKQ8nP+pPMmQktODdrknC+UTRoZ+yF/oRZ14seze3QDGkl40l+kQtDjmA6Qxr0GGUh+kCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAcuMlVk1kwDYyKJ/CrC3e16hm5qW6LOw/G3YvxyfKxxqVw0G1lFvalhehFY9G+oPYmwHc5ccbJQrGxDrC3vdYQGy7XaFcIexAuI6qkUcYuTsP59T0UASLRinCd1Nph7ae6AbB8LyKEcO96SVnA2k+xlaxmKAJ/RLSIfUkrtErrdlO+iQSNWuXO2UqaB4EcjYHYDSd/ubKNwt1Z2wgsxAHVHDYXSOrtOTZzOCY+OuxCSALLL8mZjI8iI69Lgu4Xat+P6XUxO3kLcAkm2foKLUXR4tUWgBMZwrQLuFVfEQ3Z9iSkO43b14eCX/sc5cp9qQtu+wA7l4sYwfi7mlK5kX2cw==</ds:X509Certificate>
+			</ds:X509Data>
+		  </ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:KeyDescriptor use="encryption">
+		  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:X509Data>
+			  <ds:X509Certificate>MIICoDCCAYigAwIBAgIIJMme1G0/SdYwDQYJKoZIhvcNAQELBQAwEDEOMAwGA1UEAwwFT1NfU1AwHhcNMjIwMzI1MDAwMDAwWhcNMzIwMzI1MDAwMDAwWjAQMQ4wDAYDVQQDDAVPU19TUDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIxDq7Jnk3cJ/NzEmBBiKWTol/3mVcIAWSuyCXdeIZhOkJcgqKWL/8GV7t5hQ2rX6jXA5AmvIwwcTn0dc1+4u7wJu9u/G6aqUWMeX0aQBaoWAZIX+uFJoCFWaoXiiO8vadDKwaDZuqmvZIKvt5WYM4hq7JzRb3YxcB3IqI/VgQczlfD/bFi3JP8/6/A06urB1c/LcjTMMCVCB+KsoMXCTkpowg09bG+ORFdai6TGsr9YFIe+EGFFHhFqvmVbY3qE8CXv/qU5kKOSZirrkN7lKQ8nP+pPMmQktODdrknC+UTRoZ+yF/oRZ14seze3QDGkl40l+kQtDjmA6Qxr0GGUh+kCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAcuMlVk1kwDYyKJ/CrC3e16hm5qW6LOw/G3YvxyfKxxqVw0G1lFvalhehFY9G+oPYmwHc5ccbJQrGxDrC3vdYQGy7XaFcIexAuI6qkUcYuTsP59T0UASLRinCd1Nph7ae6AbB8LyKEcO96SVnA2k+xlaxmKAJ/RLSIfUkrtErrdlO+iQSNWuXO2UqaB4EcjYHYDSd/ubKNwt1Z2wgsxAHVHDYXSOrtOTZzOCY+OuxCSALLL8mZjI8iI69Lgu4Xat+P6XUxO3kLcAkm2foKLUXR4tUWgBMZwrQLuFVfEQ3Z9iSkO43b14eCX/sc5cp9qQtu+wA7l4sYwfi7mlK5kX2cw==</ds:X509Certificate>
+			</ds:X509Data>
+		  </ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apps-uat.iss-shipping.com/IdP/SLO.aspx" />
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://apps-uat.iss-shipping.com/IdP/SLO.aspx" />
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://apps-uat.iss-shipping.com/IdP/SLO.aspx" />
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apps-uat.iss-shipping.com/IdP/SSO.aspx" index="0" isDefault="true" />
+		<Attribute name="wantAssertionEncrypted">
+			<Value>false</Value>
+		</Attribute>
+	</md:SPSSODescriptor>
+	<md:ContactPerson contactType="technical">
+		  <md:Company></md:Company>
+		  <md:GivenName></md:GivenName>
+		  <md:SurName></md:SurName>
+		  <md:EmailAddress></md:EmailAddress>
+		  <md:TelephoneNumber></md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
